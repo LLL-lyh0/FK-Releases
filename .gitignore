@@ -1,1 +1,11 @@
+# 发布暂存区（待上传 GitHub 的资产，由 tools/release-manager 生成）
 /.stage/
+
+# ⚠️ 本仓库**不提交二进制**：
+#   构建产物（exe / msi / apk / aab / basedata）只在本机落盘、经
+#   `gh release create` 挂到 tag 上，不进入 git 历史。
+#   历史里塞二进制会让仓库体积永久膨胀且无法回退，所有版本都改由 Releases 承载。
+/FKEditor-Desktop-*
+/FKEditor-Android-*
+/basedata/
+/latest.json
